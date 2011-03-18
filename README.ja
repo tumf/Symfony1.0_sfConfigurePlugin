@@ -1,0 +1,15 @@
+= sfConfigurePlugin =
+
+== configureタスク ==
+
+== configureタスクが生成するもの ==
+`configure`が生成するファイルはSubversionの管理下に入れないのがセオリー(`svn:ignore`)
+
+    * `ファイル名.in`から`ファイル名`
+トークンの置換をする。
+
+    * config.status
+`configure --append`をするときのために、`configure`の置換トークン配列をPHPの`seriaize`して保存する。`./configure --status`で内容を見る事ができる。
+
+
+== init-configureタスク ==
